@@ -17,11 +17,36 @@ $green: #50E3C2;
 * { outline: none; box-sizing: border-box; font-family: 'Circular', 'Avenir', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 html, body { background-color: $white; padding: 0px; margin: 0px; color: $color; }
 body { overflow-x: hidden; }
-#app { text-align: center; }
+#app { text-align: center; overflow-x: hidden; height: 100vh; }
 section { width: 100%; height: auto; display: flex; justify-content: center; position: relative; }
-.container { width: 1024px; }
+.container { width: 1024px; position: relative; }
 header { position: fixed; z-index: 100; top: 0px; left: 0px; text-align: left; color: $white; padding-top: 40px; display: flex; .logo { img { display: inline-block; vertical-align: middle; width: 50px; margin-right: 5px; } h1 { display: inline-block; margin: 0px; vertical-align: middle; font-size: 28px; } }
-	.links { width: 60%; align-self: flex-end; flex-grow: 1; display: flex; align-content: center; justify-content: flex-end; ul { list-style: none; li { padding: 0px 20px; display: inline-block; a { text-decoration: none; color: $white; position: relative; &::after { transition: all .4s cubic-bezier(0, 0, 0.48, 1.13); content:""; background-color: $green; position: absolute; top: calc(100% + 8px); height: 6px; width: 100%; left: -100%; opacity: 0; border-radius: 3px; } &.button { color: $primary; } &.active::after { left: 0px; opacity: 1; } &.deactive::after { left: 100%; opacity: 0; } } } } }
+	.links { width: 60%; align-self: flex-end; flex-grow: 1; display: flex; align-content: center; justify-content: flex-end; ul { list-style: none; li { padding: 0px 20px; display: inline-block; a { text-decoration: none; color: $white; position: relative; &::after { transition: all .4s cubic-bezier(0, 0, 0.48, 1.13); content:""; background-color: $green; position: absolute; top: calc(100% + 8px); height: 6px; width: 100%; left: -100%; opacity: 0; border-radius: 3px; } &.button { color: $primary; border-radius: 12px; padding: 12px 20px; } &.active::after { left: 0px; opacity: 1; } &.deactive::after { left: 100%; opacity: 0; } } } } }
 }
-button, .button { padding: 15px 20px; background-color: $white; color: $primary; border-radius: 12px; }
-section.home { height: 700px; background-image: linear-gradient(-167deg, #000000 0%, #112A49 92%); padding-top: 100px; .container { position: relative; } .bg-box { position: absolute; right: -100px; top: -40px; height: 640px; width: 640px; transform: rotate(45deg); background-image: linear-gradient(-45deg, #000000 0%, #112A49 80%); box-shadow: 0 38px 38px 0 rgba(0,0,0,0.21); border-radius: 100px; } }
+button, .button { padding: 16px 30px; cursor: pointer; @include darken_hover_active($white); color: $primary; border-radius: 15px; border: 2px solid $white; font: inherit; font-size: 14px; &.bordered { background-color: transparent; @include darken_color_hover($green); border: 2px solid $green; } &.alt { @include darken_hover_active($green); border-color: $green; }  }
+section.home { height: 700px; background-image: linear-gradient(-167deg, #000000 0%, #112A49 92%); padding-top: 100px; .bg-box { animation: box-breathing 7s ease-out infinite normal; position: absolute; right: -40px; top: -30px; height: 640px; width: 640px; background-image: linear-gradient(-45deg, #000000 0%, #112A49 80%); box-shadow: 0 38px 38px 0 rgba(0,0,0,0.21); border-radius: 100px; } 
+	.text-container { position: absolute; width: 40%; left: 30px; z-index: 5; top: 60px; text-align: left; h1 { font-size: 50px; color: $white; font-weight: 100; } p { color: $white; font-size: 14px; margin-bottom: 60px; } button.alt { margin-right: 20px; } }
+	.image-container { position: absolute; width: 80%; z-index: 4; top: 60px; right: 0px; img.phone-1 { position: absolute; z-index: 3; top: -50px; right: 10px; width: 305px; } img.phone-2 { position: absolute; z-index: 4; top: 40px; right: 70px; width: 420px; } img.gavel { width: 520px; margin-top: 140px; margin-right: 100px; } }
+}
+section.tests { height: 600px; padding: 40px 0px; padding-top: 120px; display: flex;  
+	.text-container { position: absolute; width: 30%; left: 30px; z-index: 5; top: 60px; text-align: left; div.xbadge { margin-top: 40px; } h1 { color: $primary; font-weight: 100; margin-top: 40px; } p { color: $primary; font-size: 14px; margin-top: 40px; color: darken($light-color, 30%); }}
+	.image-container { position: absolute; width: 35%; z-index: 4; top: 40px; right: 160px; img.curves { width: 100%; opacity: 0.1; } }
+}
+
+
+/* --- Globals --- */
+div.xbadge { font-size: 14px; position: relative; z-index: 2; text-transform: uppercase; color: $white; letter-spacing: 2px; display: inline-block; padding: 5px 25px; padding-bottom: 3px; border-radius: 20px; &::after, &::before { content: ""; background-image: linear-gradient(90deg, $primary 20%, lighten($primary, 10%) 60%); position: absolute; border-radius: 20px; height: 100%; width: 100%; } &::before { z-index: -2; top: 0; right: 0; border: 2px solid $white; } &::after { z-index: -4; right: -20px; top: 40%; } }
+.particles { position: absolute; top: 0px; right: 0px; height: 100%; width: 100%; span.part-one { display: block; width: 12px; height: 12px; border-radius: 6px; background-color: #FF87B3; position: absolute; top: 0px; right: 10%; } span.part-two { position: absolute; height: 14px; width: 14px; border-radius: 4px; left: 10%; top: 10%; background-color: #98C7FF; transform: rotate(-45deg); } span.part-three { position: absolute; top: 70%; left: 0px; height: 10px; width: 40px; border-radius: 5px; background-color: #E5C7FF; } span.part-four { position: absolute; top: 50%; left: 100%; height: 30px; width: 30px; border: 4px solid #FFDA9C; background-color: transparent; transform: rotate(-45deg); } }
+.particles span.part-one { animation: particles 20s linear infinite reverse; animation-delay: 1; }
+.particles span.part-two { animation: particles-alt 20s linear infinite reverse; }
+.particles span.part-three { animation: particles 20s linear infinite reverse; animation-delay: 0.6; }
+.particles span.part-four { animation: particles-alt 20s linear infinite reverse; }
+
+/* --- Animations --- */
+@keyframes breathing { 0% { transform: scale(0.9); } 25% { transform: scale(1); } 60% { transform: scale(0.9); } 100% { transform: scale(0.9); } }
+@keyframes box-breathing { 0% { transform: scale(0.9) rotate(45deg); } 25% { transform: scale(1) rotate(45deg); } 60% { transform: scale(0.9) rotate(45deg); } 100% { transform: scale(0.9) rotate(45deg); } }
+@keyframes particles { from { transform: rotate(0deg) translateX(20px) rotate(0deg); } to   { transform: rotate(360deg) translateX(20px) rotate(-360deg); } }
+@keyframes particles-alt { from { transform: rotate(0deg) translateX(20px) rotate(0deg); } to   { transform: rotate(-360deg) translateX(20px) rotate(360deg); } }
+
+
+
