@@ -1,0 +1,111 @@
+/* --- Variables --- */
+/* --- Mixins --- */
+/* --- Definitions --- */
+* {
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Circular', 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+html, body {
+  background-color: #ffffff;
+  padding: 0px;
+  margin: 0px;
+  color: #4a4a4a; }
+
+body {
+  overflow-x: hidden; }
+
+#app {
+  text-align: center; }
+
+section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  position: relative; }
+
+.container {
+  width: 1024px; }
+
+header {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  text-align: left;
+  color: #ffffff;
+  padding-top: 40px;
+  display: flex; }
+  header .logo img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    margin-right: 5px; }
+  header .logo h1 {
+    display: inline-block;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 28px; }
+  header .links {
+    width: 60%;
+    align-self: flex-end;
+    flex-grow: 1;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end; }
+    header .links ul {
+      list-style: none; }
+      header .links ul li {
+        padding: 0px 20px;
+        display: inline-block; }
+        header .links ul li a {
+          text-decoration: none;
+          color: #ffffff;
+          position: relative; }
+          header .links ul li a::after {
+            transition: all 0.4s cubic-bezier(0, 0, 0.48, 1.13);
+            content: "";
+            background-color: #50E3C2;
+            position: absolute;
+            top: calc(100% + 8px);
+            height: 6px;
+            width: 100%;
+            left: -100%;
+            opacity: 0;
+            border-radius: 3px; }
+          header .links ul li a.button {
+            color: #112A49; }
+          header .links ul li a.active::after {
+            left: 0px;
+            opacity: 1; }
+          header .links ul li a.deactive::after {
+            left: 100%;
+            opacity: 0; }
+
+button, .button {
+  padding: 15px 20px;
+  background-color: #ffffff;
+  color: #112A49;
+  border-radius: 12px; }
+
+section.home {
+  height: 700px;
+  background-image: linear-gradient(-167deg, #000000 0%, #112A49 92%);
+  padding-top: 100px; }
+  section.home .container {
+    position: relative; }
+  section.home .bg-box {
+    position: absolute;
+    right: -100px;
+    top: -40px;
+    height: 640px;
+    width: 640px;
+    transform: rotate(45deg);
+    background-image: linear-gradient(-45deg, #000000 0%, #112A49 80%);
+    box-shadow: 0 38px 38px 0 rgba(0, 0, 0, 0.21);
+    border-radius: 100px; }
+
+/*# sourceMappingURL=main.css.map */

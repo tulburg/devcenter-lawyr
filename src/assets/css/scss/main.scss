@@ -1,0 +1,27 @@
+/* --- Variables --- */
+$primary: #112A49;
+$color: #4a4a4a;
+$black: #000000;
+$white: #ffffff;
+$light-color: #b3b3b3;
+$green: #50E3C2;
+/* --- Mixins --- */
+@mixin setfont($size, $weight, $family) { font: { size: $size; weight: $weight; family: $family, helvetica, san-serif, arial; } }
+@mixin darken_hover($background) { background-color: $background; &:hover{ background-color: darken($background, 5%); } }
+@mixin darken_hover_active($background) { background-color: $background; &:hover{ background-color: darken($background, 5%); &:active{ background-color:darken($background, 10%); }} }
+@mixin background_with_icon($background) { background-color: $background; & .ic-button{ @include darken_hover(darken($background, 5%)) } }
+@mixin bg_darken($background) { background-color: $background; & .darken{ background-color:darken($background, 5%); } }
+@mixin darken_color_hover($color) { color: $color; &:hover{color:darken($color, 20%); } }
+@mixin resolve($point) { @if $point == desktop { @media (min-width: 70em) { @content ; } } @else if $point == laptop { @media (min-width: 64em) { @content ; } } @else if $point == tablet { @media (min-width: 50em) { @content ; } } @else if $point == phablet { @media (min-width: 37.5em)  { @content ; } } @else if $point == mobile { @media (max-width: 37.5em)  { @content ; }}}
+/* --- Definitions --- */
+* { outline: none; box-sizing: border-box; font-family: 'Circular', 'Avenir', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html, body { background-color: $white; padding: 0px; margin: 0px; color: $color; }
+body { overflow-x: hidden; }
+#app { text-align: center; }
+section { width: 100%; height: auto; display: flex; justify-content: center; position: relative; }
+.container { width: 1024px; }
+header { position: fixed; z-index: 100; top: 0px; left: 0px; text-align: left; color: $white; padding-top: 40px; display: flex; .logo { img { display: inline-block; vertical-align: middle; width: 50px; margin-right: 5px; } h1 { display: inline-block; margin: 0px; vertical-align: middle; font-size: 28px; } }
+	.links { width: 60%; align-self: flex-end; flex-grow: 1; display: flex; align-content: center; justify-content: flex-end; ul { list-style: none; li { padding: 0px 20px; display: inline-block; a { text-decoration: none; color: $white; position: relative; &::after { transition: all .4s cubic-bezier(0, 0, 0.48, 1.13); content:""; background-color: $green; position: absolute; top: calc(100% + 8px); height: 6px; width: 100%; left: -100%; opacity: 0; border-radius: 3px; } &.button { color: $primary; } &.active::after { left: 0px; opacity: 1; } &.deactive::after { left: 100%; opacity: 0; } } } } }
+}
+button, .button { padding: 15px 20px; background-color: $white; color: $primary; border-radius: 12px; }
+section.home { height: 700px; background-image: linear-gradient(-167deg, #000000 0%, #112A49 92%); padding-top: 100px; .container { position: relative; } .bg-box { position: absolute; right: -100px; top: -40px; height: 640px; width: 640px; transform: rotate(45deg); background-image: linear-gradient(-45deg, #000000 0%, #112A49 80%); box-shadow: 0 38px 38px 0 rgba(0,0,0,0.21); border-radius: 100px; } }
