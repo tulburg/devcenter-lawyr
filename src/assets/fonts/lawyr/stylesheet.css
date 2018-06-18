@@ -80,3 +80,9 @@
 .ic-justice:before { content: '\f119'; } /* '' */
 .ic-time:before { content: '\f11c'; } /* '' */
 .ic-user:before { content: '\f125'; } /* '' */
+
+
+.ic-caret.up { display: inline-block; vertical-align: middle; transform: rotate(180deg); }
+.ic-caret.down { display: inline-block; vertical-align: middle; }
+.ic-caret.right { display: inline-block; vertical-align: middle; transform: rotate(-90deg); }
+.ic-caret.left { display: inline-block; vertical-align: middle; transform: rotate(90deg); }

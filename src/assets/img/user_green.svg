@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="149px" height="149px" viewBox="0 0 149 149" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="185px" height="197px" viewBox="0 0 185 197" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 7</title>
+    <title>Group 12</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <circle id="path-1" cx="74.5" cy="74.5" r="74.5"></circle>
+        <filter x="-28.2%" y="-16.1%" width="156.4%" height="164.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="30" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="9" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.414281558   0 0 0 0 0.432670653   0 0 0 0 0.456313776  0 0 0 0.212918931 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="1-Home" transform="translate(-1028.000000, -3155.000000)">
+        <g id="1-Home" transform="translate(-1541.000000, -3328.000000)">
             <g id="Section-4" transform="translate(264.000000, 2914.000000)">
                 <g id="Group-10" transform="translate(764.000000, 71.000000)">
-                    <g id="Group-7" transform="translate(0.000000, 170.000000)">
-                        <circle id="Oval-2-Copy" fill="#50E3C2" cx="74.5" cy="74.5" r="74.5"></circle>
+                    <g id="Group-12" transform="translate(531.000000, 343.000000)">
+                        <g id="Oval-2-Copy-2">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#50E3C2" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
                         <path d="M33.8112996,136.917632 C31.9945151,132.125533 31,126.928907 31,121.5 C31,97.4756134 50.4756134,78 74.5,78 C98.5243866,78 118,97.4756134 118,121.5 C118,126.928907 117.005485,132.125533 115.1887,136.917632 C103.491317,144.558473 89.5143454,149 74.5,149 C59.4856546,149 45.5086834,144.558473 33.8112996,136.917632 Z" id="Combined-Shape" fill="#FFFFFF"></path>
-                        <circle id="Oval-6" fill="#FFFFFF" cx="72.5" cy="55.5" r="17.5"></circle>
+                        <circle id="Oval-6" fill="#FFFFFF" cx="74.5" cy="55.5" r="17.5"></circle>
                     </g>
                 </g>
             </g>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="22px" viewBox="0 0 23 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polyline id="path-1" points="7.06896552 8.4609375 11.1530172 12.2515914 19.7548491 0.0164930556"></polyline>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2-Pricing" transform="translate(-367.000000, -1635.000000)">
+            <g id="Section-2" transform="translate(215.000000, 1205.000000)">
+                <g id="1" transform="translate(0.000000, 133.000000)">
+                    <g id="Group" transform="translate(152.000000, 300.000000)">
+                        <g id="tick">
+                            <rect id="Rectangle-12" stroke="#50E3C2" stroke-width="2.8" x="1.4" y="3.51111111" width="13.7517241" height="14.0888889" rx="5.6"></rect>
+                            <g id="Path-2" stroke-linecap="round" stroke-linejoin="round">
+                                <use stroke="#FFFFFF" stroke-width="5.6" xlink:href="#path-1"></use>
+                                <use stroke="#50E3C2" stroke-width="2.8" xlink:href="#path-1"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
