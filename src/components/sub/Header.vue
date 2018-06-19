@@ -48,6 +48,46 @@
 				</div>
 			</div>
 		</Modal>
+
+		<Modal title="Contact Modal" :plain="1>0" :show="showContactModal" :sticky="1<0" :onclose="() => { showContactModal = false }">
+			<div slot="body">
+				<div class="contact">
+					<h1>Contact</h1>
+					<p>Hi, enter details of your enquiry below</p>
+					<form v-on:submit.prevent="submitSignUp">
+						<ul class="grid grid-2">
+							<li>
+								<div class="input-wrapper-alt">
+									<label class="left">Name</label>
+									<div class="wrapp">
+										<div :class="{active: contactNameError=''}" class="alert">{{ contactNameError }}</div>
+										<input type="text" v-model="contactName" placeholder="Enter name" />
+									</div> 
+								</div>
+							</li>
+							<li>
+								<div class="input-wrapper-alt">
+									<label class="left">Email</label>
+									<div class="wrapp">
+										<div :class="{active: contactEmailError=''}" class="alert">{{ contactEmailError }}</div>
+										<input type="text" v-model="contactEmail" placeholder="Enter your email address" />
+									</div> 
+								</div>
+							</li>
+						</ul>
+						<ul class="grid">
+							<li class="message-li">
+								<div class="input-wrapper-alt">
+									<label class="left">Your message</label>
+									<textarea placeholder="Enter your message"></textarea>
+								</div>
+							</li>
+						</ul>
+						<button class="alt compat shadow">CONTINUE</button>
+					</form>
+				</div>
+			</div>
+		</Modal>
 	</header>
 </template>
 
@@ -58,7 +98,7 @@
 	export default {
 		name: 'Header',
 		components: { Modal },
-		data() { return { showSignUpModal: false, values: { name: '', email: '', username: '', password: '' },
+		data() { return { showSignUpModal: false, showContactModal: false, values: { name: '', email: '', username: '', password: '' },
 			links: [ 
 				{ href: "/", title: "Home" }, 
 				{ href: "/features", title: "Features" },
@@ -73,7 +113,8 @@
 				{ label: 'Password', ph: 'Enter a new password', key: 'password'}
 			],
 			errors: { name: '', email: '', username: '', password: '' },
-			signupSuccess: false, uploadSuccess: false
+			signupSuccess: false, uploadSuccess: false, contactEmail: '', contactName: '', contactMessage: '',
+			contactNameError: '', contactEmailError: ''
 		} },
 		methods: {
 			setActiveLink(e) {
@@ -88,6 +129,7 @@
 			},
 			showModals(addr) {
 				if(addr == '#signup') this.showSignUpModal = true; 
+				if(addr == '#contact') this.showContactModal = true; 
 			},
 			submitSignUp() {
 				// if(this.values.name == '') { this.errors['name'] = 'Your fullname is required'; this.clearErrors(); return; }
@@ -116,16 +158,16 @@
 			},
 			hide(el, complete) {
 				var h = el.offsetHeight;
-				el.style = "height: "+h+"px; overflow: hidden; opacity: 1; transition: all .8s cubic-bezier(.25,.1,.25,1);";
-				setTimeout(() => { el.style = "height: 0px; overflow: hidden; transition: all .8s cubic-bezier(.25,.1,.25,1); opacity: 0;"; }, 0.5);
-				setTimeout(() => { complete() }, 810);
+				el.style = "height: "+h+"px; overflow: hidden; opacity: 1; transition: all .6s cubic-bezier(.25,.1,.25,1);";
+				setTimeout(() => { el.style = "height: 0px; overflow: hidden; transition: all .6s cubic-bezier(.25,.1,.25,1); opacity: 0;"; }, 0.5);
+				if(complete) setTimeout(() => { complete() }, 810);
 			},
 			reveal(el) {
-				el.style = "height: auto; overflow: hidden; opacity: 0; transition: all .8s cubic-bezier(.25,.1,.25,1);";
+				el.style = "height: auto; overflow: hidden; opacity: 0; transition: all .6s cubic-bezier(.25,.1,.25,1);";
 				var h = el.offsetHeight;
-				el.style = "height: 0px; overflow: hidden; transition: all .8s cubic-bezier(.25,.1,.25,1); opacity: 0;"; 
+				el.style = "height: 0px; overflow: hidden; transition: all .6s cubic-bezier(.25,.1,.25,1); opacity: 0;"; 
 				setTimeout(() => { 
-					el.style = "height: "+h+"px; overflow: hidden; transition: all .8s cubic-bezier(.25,.1,.25,1); opacity: 1;"; }, 0.5);
+					el.style = "height: "+h+"px; overflow: hidden; transition: all .6s cubic-bezier(.25,.1,.25,1); opacity: 1;"; }, 0.5);
 			}
 		},
 		mounted() {

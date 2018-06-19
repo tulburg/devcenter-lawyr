@@ -5,7 +5,7 @@
 				<div class="text-container">
 					<h1>Get Access to Lawyr for just N3000</h1>
 					<p>Made for Law Students, Lawyr helps you study for your Law School examinations with nothing but your mobile phone.</p>
-					<button class="alt">View Features</button>
+					<button class="alt shadow">View Features</button>
 				</div>
 				<div class="image-container">
 					<img class="fan" src="../assets/img/fan.svg" alt="fan" />

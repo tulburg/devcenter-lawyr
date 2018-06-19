@@ -476,7 +476,8 @@ section.pricing {
     section.pricing .image-container img.fan {
       width: 600px;
       margin-top: 80px;
-      margin-right: -100px; }
+      margin-right: -100px;
+      opacity: 0.93; }
     section.pricing .image-container img.phone-cover {
       width: 105%;
       position: absolute;
@@ -705,6 +706,40 @@ div.done {
       margin-top: 40px; }
   #sign-up-modal .dialog .footer {
     text-align: center; }
+
+#contact-modal .dialog {
+  width: 720px; }
+
+div.contact {
+  text-align: center; }
+  div.contact h1 {
+    font-size: 38px;
+    color: #112A49;
+    margin-bottom: 5px; }
+  div.contact p {
+    color: #112A49;
+    text-align: center;
+    margin-top: 0px; }
+  div.contact button {
+    margin-bottom: 20px; }
+  div.contact ul.grid.grid-2 {
+    padding-right: 40px; }
+    div.contact ul.grid.grid-2 li:first-child {
+      padding-right: 20px; }
+    div.contact ul.grid.grid-2 li:last-child {
+      padding-left: 20px; }
+  div.contact textarea {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    height: 300px;
+    width: 100%;
+    resize: none;
+    font: inherit;
+    padding: 20px;
+    margin-bottom: 20px; }
+  div.contact .message-li {
+    width: 100%;
+    padding-right: 80px; }
 
 /* --- Globals --- */
 div.xbadge {
@@ -989,7 +1024,7 @@ div.modal .dialog {
   position: relative;
   max-width: 800px;
   background-color: #ffffff;
-  border-radius: 3px 3px 0px 0px; }
+  border-radius: 5px 5px 0px 0px; }
 
 div.modal .dialog .close {
   position: absolute;
@@ -1008,7 +1043,8 @@ div.modal .header {
 
 div.modal .body {
   padding: 40px;
-  text-align: left; }
+  text-align: left;
+  padding-bottom: 0px; }
 
 div.modal .footer {
   position: absolute;
@@ -1018,7 +1054,7 @@ div.modal .footer {
   width: 100%;
   padding: 0px 40px 40px 40px;
   text-align: right;
-  border-radius: 0px 0px 3px 3px;
+  border-radius: 0px 0px 5px 5px;
   transition: all .3s ease-in-out; }
   div.modal .footer.offset {
     border-top: 1px solid #e6e6e6;
