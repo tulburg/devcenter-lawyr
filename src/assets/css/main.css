@@ -18,9 +18,7 @@ body {
   overflow-x: hidden; }
 
 #app {
-  text-align: center;
-  overflow-x: hidden;
-  height: 100vh; }
+  text-align: center; }
 
 section, footer {
   width: 100%;
@@ -35,7 +33,7 @@ section, footer {
   position: relative; }
 
 header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 100;
   top: 0px;
@@ -51,7 +49,8 @@ header {
     display: inline-block;
     vertical-align: middle;
     width: 50px;
-    margin-right: 5px; }
+    margin-right: 5px;
+    margin-left: -40px; }
   header .logo h1 {
     display: inline-block;
     margin: 0px;
@@ -87,7 +86,8 @@ header {
           header .links ul li a.button {
             color: #112A49;
             border-radius: 12px;
-            padding: 12px 20px; }
+            padding: 12px 20px;
+            font-weight: bold; }
           header .links ul li a.active::after {
             left: 0px;
             opacity: 1; }
@@ -98,12 +98,13 @@ header {
 button, .button {
   padding: 16px 30px;
   cursor: pointer;
+  font-weight: bold !important;
   background-color: #ffffff;
   color: #112A49;
-  border-radius: 15px;
+  border-radius: 20px;
   border: 2px solid #ffffff;
   font: inherit;
-  font-size: 14px; }
+  font-size: 15px; }
   button:hover, .button:hover {
     background-color: #f2f2f2; }
     button:hover:active, .button:hover:active {
@@ -162,8 +163,9 @@ section.home {
       font-weight: 100; }
     section.home .text-container p {
       color: #ffffff;
-      font-size: 14px;
-      margin-bottom: 60px; }
+      font-size: 15px;
+      margin-bottom: 60px;
+      font-weight: 100; }
     section.home .text-container button.alt {
       margin-right: 20px; }
   section.home .image-container {
@@ -408,14 +410,16 @@ footer {
     color: #071220;
     margin-bottom: 40px; }
   footer .input-wrapper {
+    width: 50%;
     background-color: #ffffff;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     display: inline-block;
     height: 80px;
-    border-radius: 20px;
+    border-radius: 28px;
     border: 1px solid #f2f2f2;
     margin-bottom: 80px; }
     footer .input-wrapper input {
+      width: calc(100% - 150px);
       font-size: 18px;
       border: 0px;
       padding: 15px;

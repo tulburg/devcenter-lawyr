@@ -37,7 +37,7 @@
 							<div class="label">PREMIUM ACCESS</div>
 							<div class="price">‎<span>₦</span>3000</div>
 							<ul>
-								<li>Gain access to 8 years of past questions, and the option of access to resit questions.</li>
+								<li>Gain access to 8 years of past questions and the option of access to resit questions.</li>
 								<li>View corrections and explanations</li>
 								<li>Take test as a single user or as a group</li>
 								<li>Customise your revision by creating flashcards</li>
@@ -53,19 +53,19 @@
 				<div class="footer-particle">
 					<div class="particles"><span class="part-one"></span><span class="part-two"></span><span class="part-three"></span><span class="part-four"></span></div>
 				</div>
-				<div class="footer-holder">
-					<h1>Get Started for Free</h1>
-					<p>Download Lawyr</p>
-					<div class="input-wrapper">
-						<input type="text" placeholder="Enter email address" />
-						<button class="alt">Sign Up</button>
-					</div>
-					<div class="download">
-						<a href="#"><img src="../assets/img/app_store.png" alt="App Store" /></a>
-						<a href="#"><img src="../assets/img/googleplay.png" alt="App Store" /></a>
-					</div>
-					<span>&copy; Lawyr 2018</span>
+
+				<h1>Get Started for Free</h1>
+				<p>Download Lawyr</p>
+				<div class="input-wrapper">
+					<input type="text" placeholder="Enter Email Address" />
+					<button class="alt">Sign Up</button>
 				</div>
+				<div class="download">
+					<a href="#"><img src="../assets/img/app_store.png" alt="App Store" /></a>
+					<a href="#"><img src="../assets/img/googleplay.png" alt="App Store" /></a>
+				</div>
+				<span>&copy; Lawyr 2018</span>
+
 			</div>
 		</footer>
 	</div>

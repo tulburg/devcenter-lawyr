@@ -29,7 +29,7 @@
 				<h1>Get Started for Free</h1>
 				<p>Download Lawyr</p>
 				<div class="input-wrapper">
-					<input type="text" placeholder="Enter email address" />
+					<input type="text" placeholder="Enter Email Address" />
 					<button class="alt">Sign Up</button>
 				</div>
 				<div class="download">

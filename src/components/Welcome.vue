@@ -9,7 +9,7 @@
 					<button class="alt">Sign Up</button> <button class="bordered">Learn More</button>
 				</div>
 				<div class="image-container">
-					<img class="gavel" src="../assets/img/hammer.png" alt="gavel" />
+					<!-- <img class="gavel" src="../assets/img/hammer.png" alt="gavel" /> -->
 					<img class="phone-2" src="../assets/img/phone_1.png" alt="IPhone X" />
 					<img class="phone-1" src="../assets/img/phone_2.png" alt="IPhone X Too" />
 				</div>
@@ -108,7 +108,7 @@
 				<h1>Get Started for Free</h1>
 				<p>Download Lawyr</p>
 				<div class="input-wrapper">
-					<input type="text" placeholder="Enter email address" />
+					<input type="text" placeholder="Enter Email Address" />
 					<button class="alt">Sign Up</button>
 				</div>
 				<div class="download">

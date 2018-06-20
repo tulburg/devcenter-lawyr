@@ -171,24 +171,24 @@
 			}
 		},
 		mounted() {
-			function checkScroll() {
-				var y = $("#app").scrollTop;
-				if(y < 100) {
-					var alpha = y/100 - 0.25;
-					var padding = 40 - (Math.min(y, 20 * 8) * 0.2197);
-					$(">header").style = 'background-color: rgba(17, 42, 73, '+alpha+'); box-shadow: 0px 10px 20px rgba(17, 42, 73, '+alpha+'); ';
-					$(">header").$(".container").style = 'padding-top: '+padding+'px;';
-				}else {
-					$(">header").style = 'background-color: rgba(17, 42, 73, 0.75); box-shadow: 0px 10px 20px rgba(17, 42, 73, 0.75); ';
-					$(">header").$(".container").style = 'padding-top: 20px;';
-				}
-			}
-			$("#app").onscroll = function(e) { 
-				checkScroll();
-			}
-			window.onresize = function() {
-				checkScroll();
-			}
+			// function checkScroll() {
+			// 	var y = $("#app").scrollTop;
+			// 	if(y < 100) {
+			// 		var alpha = y/100 - 0.25;
+			// 		var padding = 40 - (Math.min(y, 20 * 8) * 0.2197);
+			// 		$(">header").style = 'background-color: rgba(17, 42, 73, '+alpha+'); box-shadow: 0px 10px 20px rgba(17, 42, 73, '+alpha+'); ';
+			// 		$(">header").$(".container").style = 'padding-top: '+padding+'px;';
+			// 	}else {
+			// 		$(">header").style = 'background-color: rgba(17, 42, 73, 0.75); box-shadow: 0px 10px 20px rgba(17, 42, 73, 0.75); ';
+			// 		$(">header").$(".container").style = 'padding-top: 20px;';
+			// 	}
+			// }
+			// $("#app").onscroll = function(e) { 
+			// 	checkScroll();
+			// }
+			// window.onresize = function() {
+			// 	checkScroll();
+			// }
 		}
 	}
 </script>
