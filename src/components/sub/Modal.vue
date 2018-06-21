@@ -36,6 +36,8 @@
 		watch: {
 			show: function(show) {
 				this.showing = show;
+				if(!show) { $(">body").style="" }
+				else { $(">body").style="overflow: hidden;" }
 			}
 		},
 		mounted() {
