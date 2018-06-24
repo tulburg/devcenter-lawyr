@@ -11,6 +11,7 @@
 					<li v-else><a :href="link.href" :class="{ button: link.action, active: (link.href==$route.path) }" v-on:click.prevent="showModals(link.href)">{{ link.title }}</a></li>
 				</ul>
 			</div>
+			<div class="mobile-menu"><i class="ic-menu-alt"></i></div>
 		</div>
 		<Modal title="Sign Up Modal" :plain="1>0" :show="showSignUpModal" :sticky="1<0" :onclose="() => { showSignUpModal = false }">
 			<div slot="body">

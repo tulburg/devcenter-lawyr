@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="p-main">
 		<section class="features">
 			<div class="container">
 				<img class="looper" src="../assets/img/looper.svg" alt="background" />

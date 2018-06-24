@@ -19,7 +19,7 @@
 			</div>
 			<div class="container">
 				<div class="bars-wrapper">
-					<div class="left-pane" align="right">
+					<div class="left-pane">
 						<div class="box">
 							<div class="label">FREE ACCESS</div>
 							<div class="price">‎<span>₦</span>0</div>
@@ -32,7 +32,7 @@
 						</div>
 					</div>
 					<div class="mid-pane"><span>OR</span></div>
-					<div class="right-pane" align="left">
+					<div class="right-pane">
 						<div class="box">
 							<div class="label">PREMIUM ACCESS</div>
 							<div class="price">‎<span>₦</span>3000</div>

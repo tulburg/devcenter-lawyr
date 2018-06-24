@@ -72,6 +72,7 @@
 .ic-double-tick:before { content: '\eb54'; } /* '' */
 .ic-bell:before { content: '\eb55'; } /* '' */
 .ic-upload-image:before { content: '\eb56'; } /* '' */
+.ic-menu-alt:before { content: '\ee9b'; } /* '' */
 .ic-menu:before { content: '\f102'; } /* '' */
 .ic-search:before { content: '\f10f'; } /* '' */
 .ic-clock:before { content: '\f110'; } /* '' */

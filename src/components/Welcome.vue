@@ -1,12 +1,14 @@
 <template>
-	<div>
+	<div class="p-main">
 		<section class="home" id="home">
 			<div class="container main-container">
 				<div class="bg-box"></div>
 				<div class="text-container">
 					<h1>An Easy way for an Easy A</h1>
 					<p>Made for Law Students, Lawyr helps you study for your Law School examinations with nothing but your mobile phone.</p>
-					<button class="alt">Sign Up</button> <button class="bordered">Learn More</button>
+					<div class="buttons">
+						<button class="alt">Sign Up</button> <button class="bordered">Learn More</button>
+					</div>
 				</div>
 				<div class="image-container">
 					<!-- <img class="gavel" src="../assets/img/hammer.png" alt="gavel" /> -->

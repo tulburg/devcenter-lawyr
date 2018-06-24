@@ -6,7 +6,8 @@
   box-sizing: border-box;
   font-family: 'Circular', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  transition: all .3s ease-in-out; }
 
 html, body {
   background-color: #ffffff;
@@ -50,7 +51,7 @@ header {
     vertical-align: middle;
     width: 50px;
     margin-right: 5px;
-    margin-left: -40px; }
+    margin-left: 0px; }
   header .logo h1 {
     display: inline-block;
     margin: 0px;
@@ -94,6 +95,16 @@ header {
           header .links ul li a.deactive::after {
             left: 100%;
             opacity: 0; }
+  header .mobile-menu {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #112A49;
+    border-radius: 8px;
+    margin-right: 40px;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 7px; }
 
 button, .button {
   padding: 16px 30px;
@@ -423,7 +434,8 @@ footer {
       font-size: 18px;
       border: 0px;
       padding: 15px;
-      padding-left: 30px; }
+      padding-left: 30px;
+      background-color: transparent; }
     footer .input-wrapper button {
       margin-top: 15px;
       margin-right: 15px;
@@ -509,6 +521,8 @@ div.bars {
     margin-top: 50px; }
     div.bars .bars-wrapper .left-pane {
       width: 45%; }
+      div.bars .bars-wrapper .left-pane .box {
+        margin-left: auto; }
     div.bars .bars-wrapper .mid-pane {
       width: 10%;
       height: 100%;
@@ -526,6 +540,8 @@ div.bars {
         padding-top: 8px; }
     div.bars .bars-wrapper .right-pane {
       width: 45%; }
+      div.bars .bars-wrapper .right-pane .box {
+        margin-right: auto; }
     div.bars .bars-wrapper .box {
       width: 80%;
       border-radius: 5px;
@@ -1107,5 +1123,319 @@ div.modal .footer {
   animation-name: overlayOut;
   animation-duration: .2s;
   animation-timing-function: ease-in-out; }
+
+@media (max-width: 50em) {
+  .p-main {
+    overflow: hidden; }
+
+  footer {
+    height: auto; }
+
+  header .logo {
+    padding-left: 40px;
+    flex-grow: 1; }
+  header .links {
+    display: none; }
+  header .mobile-menu {
+    display: block; }
+
+  section.home {
+    height: 1080px; }
+    section.home .bg-box {
+      height: 540px;
+      width: 540px;
+      top: 0px; }
+    section.home .text-container {
+      width: 100%;
+      padding: 20px; }
+      section.home .text-container p {
+        width: 100%;
+        margin-top: 370px;
+        text-align: center;
+        padding: 0px 120px;
+        margin-left: -30px; }
+      section.home .text-container h1 {
+        width: 40%;
+        margin-top: 100px; }
+      section.home .text-container button {
+        padding: 20px 40px; }
+      section.home .text-container .buttons {
+        position: relative;
+        text-align: center;
+        margin-left: -60px; }
+    section.home .image-container {
+      width: 100%; }
+      section.home .image-container img.phone-1 {
+        width: 240px;
+        right: 60px;
+        top: 30px; }
+      section.home .image-container img.phone-2 {
+        width: 355px;
+        right: 110px;
+        top: 120px; }
+
+  section.tests {
+    height: 840px;
+    padding-top: 80px; }
+    section.tests .text-container {
+      width: 60%;
+      left: 20%;
+      text-align: center;
+      top: 440px; }
+      section.tests .text-container h1 {
+        font-size: 40px; }
+      section.tests .text-container p {
+        font-size: 20px; }
+      section.tests .text-container .xbadge {
+        display: none; }
+    section.tests .image-container {
+      width: 50%;
+      right: 0px;
+      left: 25%;
+      top: 0px; }
+
+  section.flashcard {
+    height: 840px;
+    padding-top: 80px; }
+    section.flashcard .text-container {
+      width: 60%;
+      left: 20%;
+      text-align: center;
+      top: 440px; }
+      section.flashcard .text-container h1 {
+        font-size: 40px; }
+      section.flashcard .text-container p {
+        font-size: 20px; }
+      section.flashcard .text-container .xbadge {
+        display: none; }
+    section.flashcard .image-container {
+      width: 50%;
+      right: 0px;
+      left: 25%;
+      top: 0px; }
+
+  section.group {
+    height: 840px;
+    padding-top: 80px; }
+    section.group .text-container {
+      width: 60%;
+      left: 20%;
+      text-align: center;
+      top: 440px; }
+      section.group .text-container h1 {
+        font-size: 40px; }
+      section.group .text-container p {
+        font-size: 20px; }
+      section.group .text-container .xbadge {
+        display: none; }
+    section.group .image-container {
+      width: 50%;
+      right: 0px;
+      left: 25%;
+      top: 0px; }
+
+  section.curated {
+    display: none; }
+
+  /* page */
+  section.points {
+    padding: 10px; }
+    section.points ul.grid {
+      width: 100%; }
+      section.points ul.grid li {
+        padding: 10px; }
+
+  section.pricing .text-container {
+    padding-left: 20px; }
+  section.pricing .image-container img.fan {
+    height: 400px; } }
+@media (max-width: 37.5em) {
+  header .logo {
+    padding-left: 20px; }
+  header .container {
+    padding: 20px 0px 10px 0px; }
+  header .mobile-menu {
+    font-size: 22px;
+    height: 46px;
+    width: 46px;
+    padding-top: 8px;
+    margin-right: 20px; }
+
+  section.home {
+    height: 900px; }
+    section.home .bg-box {
+      height: 440px;
+      width: 440px;
+      top: 0px; }
+    section.home .text-container {
+      padding: 0px; }
+      section.home .text-container p {
+        margin-top: 160px;
+        padding: 40px;
+        margin-bottom: 0px; }
+      section.home .text-container h1 {
+        font-size: 28px; }
+      section.home .text-container .buttons {
+        padding: 0px 20px; }
+        section.home .text-container .buttons button {
+          padding: 20px 30px;
+          width: calc(100% - 80px);
+          margin: 10px 40px;
+          font-size: 24px; }
+    section.home .image-container img.phone-1 {
+      width: 160px;
+      right: -60px;
+      top: 0px; }
+    section.home .image-container img.phone-2 {
+      width: 225px;
+      right: -30px;
+      top: 60px; }
+    section.home .bg-box {
+      right: -200px; }
+
+  section.tests {
+    height: 760px;
+    padding-top: 40px; }
+    section.tests .text-container {
+      width: 80%;
+      left: 10%;
+      text-align: center;
+      top: 360px; }
+      section.tests .text-container h1 {
+        font-size: 30px; }
+      section.tests .text-container p {
+        font-size: 16px; }
+      section.tests .text-container .xbadge {
+        display: none; }
+    section.tests .image-container {
+      width: 90%;
+      right: 0px;
+      left: 5%;
+      top: 0px; }
+
+  section.flashcard {
+    height: 760px;
+    padding-top: 40px; }
+    section.flashcard .text-container {
+      width: 80%;
+      left: 10%;
+      text-align: center;
+      top: 360px; }
+      section.flashcard .text-container h1 {
+        font-size: 30px; }
+      section.flashcard .text-container p {
+        font-size: 16px; }
+      section.flashcard .text-container .xbadge {
+        display: none; }
+    section.flashcard .image-container {
+      width: 90%;
+      right: 0px;
+      left: 5%;
+      top: 0px; }
+
+  section.group {
+    height: 760px;
+    padding-top: 40px; }
+    section.group .text-container {
+      width: 80%;
+      left: 10%;
+      text-align: center;
+      top: 360px; }
+      section.group .text-container h1 {
+        font-size: 30px; }
+      section.group .text-container p {
+        font-size: 16px; }
+      section.group .text-container .xbadge {
+        display: none; }
+    section.group .image-container {
+      width: 90%;
+      right: 0px;
+      left: 5%;
+      top: 0px; }
+
+  section.curated {
+    display: none; }
+
+  footer .input-wrapper {
+    width: 90%; }
+    footer .input-wrapper button {
+      padding-left: 10px;
+      padding-right: 10px; }
+    footer .input-wrapper input {
+      width: calc(100% - 100px); }
+  footer h1 {
+    font-size: 26px; }
+
+  /* page */
+  .p-main {
+    overflow: hidden; }
+
+  section.features .looper {
+    width: 150%;
+    left: -20%; }
+  section.features .ball {
+    width: 120%;
+    height: 420px;
+    left: -10%;
+    top: -5%;
+    padding-top: 40px; }
+    section.features .ball h1 {
+      font-size: 26px;
+      margin-bottom: 40px; }
+    section.features .ball p {
+      padding: 0px 60px;
+      width: 100%;
+      font-size: 16px; }
+
+  section.points {
+    padding: 10px; }
+    section.points ul.grid {
+      width: 100%;
+      padding-top: 0px;
+      padding-bottom: 0px; }
+      section.points ul.grid li {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px; }
+
+  section.pricing {
+    height: 700px; }
+    section.pricing .text-container {
+      text-align: center;
+      width: 100%;
+      left: 10px; }
+      section.pricing .text-container h1 {
+        width: 50%;
+        font-size: 28px;
+        text-align: left; }
+      section.pricing .text-container p {
+        margin-right: 40px;
+        margin-top: 160px;
+        text-align: center; }
+      section.pricing .text-container button.alt {
+        margin-right: 40px;
+        padding: 20px 40px; }
+    section.pricing .image-container {
+      width: 100%;
+      right: -50px; }
+      section.pricing .image-container img.fan {
+        width: 300px;
+        margin-right: -180px;
+        margin-top: 0px; }
+
+  div.bars {
+    padding-top: 20px; }
+    div.bars .param {
+      width: auto;
+      margin: 20px; }
+    div.bars .bars-wrapper {
+      flex-direction: column;
+      width: 100%; }
+      div.bars .bars-wrapper .left-pane, div.bars .bars-wrapper .right-pane, div.bars .bars-wrapper .mid-pane {
+        width: 100%; }
+        div.bars .bars-wrapper .left-pane .box, div.bars .bars-wrapper .right-pane .box, div.bars .bars-wrapper .mid-pane .box {
+          margin: auto; }
+      div.bars .bars-wrapper .mid-pane {
+        padding: 20px 0px; } }
 
 /*# sourceMappingURL=main.css.map */
