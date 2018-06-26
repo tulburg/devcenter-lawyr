@@ -11,7 +11,15 @@
 					<li v-else><a :href="link.href" :class="{ button: link.action, active: (link.href==$route.path) }" v-on:click.prevent="showModals(link.href)">{{ link.title }}</a></li>
 				</ul>
 			</div>
-			<div class="mobile-menu"><i class="ic-menu-alt"></i></div>
+			<div class="mobile-menu" v-on:click="showMobileMenu=!showMobileMenu"><i class="ic-menu-alt"></i></div>
+			<div :class="{ active: showMobileMenu }" class="mobile-menu-modal">
+				<i class="ic-cancel" v-on:click="showMobileMenu=!showMobileMenu"></i>
+				<h2>MENU</h2>
+				<ul>
+					<li v-for="link in links" v-if="!link.href.match('#')" v-on:click="showMobileMenu=!showMobileMenu"><router-link :to="link.href" :class="{ active: (link.href==$route.path) }">{{ link.title }}</router-link></li>
+					<li v-else v-on:click="showMobileMenu=!showMobileMenu"><a :href="link.href" :class="{ active: (link.href==$route.path) }" v-on:click.prevent="showModals(link.href)">{{ link.title }}</a></li>
+				</ul>
+			</div>
 		</div>
 		<Modal title="Sign Up Modal" :plain="1>0" :show="showSignUpModal" :sticky="1<0" :onclose="() => { showSignUpModal = false }">
 			<div slot="body">
@@ -99,7 +107,7 @@
 	export default {
 		name: 'Header',
 		components: { Modal },
-		data() { return { showSignUpModal: false, showContactModal: false, values: { name: '', email: '', username: '', password: '' },
+		data() { return { showSignUpModal: false, showContactModal: false, showMobileMenu: false, values: { name: '', email: '', username: '', password: '' },
 			links: [ 
 				{ href: "/", title: "Home" }, 
 				{ href: "/features", title: "Features" },

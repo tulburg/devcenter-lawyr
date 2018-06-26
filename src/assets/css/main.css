@@ -6,8 +6,7 @@
   box-sizing: border-box;
   font-family: 'Circular', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: all .3s ease-in-out; }
+  -moz-osx-font-smoothing: grayscale; }
 
 html, body {
   background-color: #ffffff;
@@ -20,6 +19,9 @@ body {
 
 #app {
   text-align: center; }
+
+.p-main {
+  overflow: hidden; }
 
 section, footer {
   width: 100%;
@@ -97,6 +99,7 @@ header {
             opacity: 0; }
   header .mobile-menu {
     display: none;
+    cursor: pointer;
     width: 50px;
     height: 50px;
     background-color: #112A49;
@@ -105,6 +108,48 @@ header {
     font-size: 28px;
     text-align: center;
     padding-top: 7px; }
+  header .mobile-menu-modal {
+    transition: all 0.2s cubic-bezier(0.45, 0.1, 0.45, 1);
+    box-shadow: -20px 0px 25px 2px rgba(40, 40, 40, 0.12);
+    background-color: #ffffff;
+    border-radius: 10px 0px 0px 10px;
+    height: 100%;
+    position: fixed;
+    right: -110%;
+    top: 0px;
+    width: 82%; }
+    header .mobile-menu-modal.active {
+      right: 0px; }
+    header .mobile-menu-modal h2 {
+      color: #50E3C2;
+      margin-left: 35%;
+      margin-top: 40px;
+      font-size: 18px; }
+    header .mobile-menu-modal i {
+      cursor: pointer;
+      height: 50px;
+      width: 50px;
+      font-size: 26px;
+      color: #b3b3b3;
+      margin: 20px;
+      margin-left: 40px;
+      display: block;
+      text-align: center;
+      padding-top: 12px; }
+    header .mobile-menu-modal ul {
+      padding: 0px;
+      margin: 0px;
+      margin-left: 35%;
+      list-style: none; }
+      header .mobile-menu-modal ul li a {
+        font-size: 28px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #112A49;
+        display: block;
+        padding: 40px 0px; }
+        header .mobile-menu-modal ul li a.active {
+          color: #50E3C2; }
 
 button, .button {
   padding: 16px 30px;
@@ -413,6 +458,8 @@ section.curated {
 
 footer {
   height: 300px; }
+  footer.alt {
+    height: 600px; }
   footer h1 {
     font-weight: 100;
     color: #112A49;
@@ -1237,6 +1284,12 @@ div.modal .footer {
   section.curated {
     display: none; }
 
+  #sign-up-modal .dialog .body {
+    padding: 20px; }
+
+  #contact-modal .dialog .body {
+    padding: 20px; }
+
   /* page */
   section.points {
     padding: 10px; }
@@ -1260,6 +1313,15 @@ div.modal .footer {
     width: 46px;
     padding-top: 8px;
     margin-right: 20px; }
+  header .mobile-menu-modal h2 {
+    margin-left: 28%; }
+  header .mobile-menu-modal i {
+    margin: 20px;
+    font-size: 18px; }
+  header .mobile-menu-modal ul {
+    margin-left: 28%; }
+    header .mobile-menu-modal ul li a {
+      padding: 20px 0px; }
 
   section.home {
     height: 900px; }
@@ -1365,6 +1427,36 @@ div.modal .footer {
       width: calc(100% - 100px); }
   footer h1 {
     font-size: 26px; }
+
+  #sign-up-modal h1 {
+    font-size: 24px; }
+  #sign-up-modal p {
+    font-size: 14px; }
+  #sign-up-modal .dialog {
+    width: calc(100% - 16px); }
+    #sign-up-modal .dialog .body {
+      padding: 20px; }
+    #sign-up-modal .dialog form {
+      width: 90%; }
+  #sign-up-modal div.welcome .upload-buttons button {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 20px; }
+
+  #contact-modal .dialog {
+    width: calc(100% - 16px); }
+    #contact-modal .dialog .body {
+      padding: 20px; }
+      #contact-modal .dialog .body ul {
+        padding-right: 0px; }
+        #contact-modal .dialog .body ul li {
+          padding: 0px 10px; }
+      #contact-modal .dialog .body ul.grid-2 li {
+        width: 100%; }
+  #contact-modal .input-wrapper-alt {
+    width: calc(100% - 40px); }
+    #contact-modal .input-wrapper-alt input {
+      width: 100%; }
 
   /* page */
   .p-main {

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="p-main">
 		<section class="pricing">
 			<div class="container">
 				<div class="text-container">
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 
-		<footer>
+		<footer class="alt">
 			<div class="container">
 				<div class="footer-particle">
 					<div class="particles"><span class="part-one"></span><span class="part-two"></span><span class="part-three"></span><span class="part-four"></span></div>
