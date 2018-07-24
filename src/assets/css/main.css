@@ -21,7 +21,8 @@ body {
   text-align: center; }
 
 .p-main {
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 300px; }
 
 section, footer {
   width: 100%;

@@ -18,7 +18,7 @@ $green: #50E3C2;
 html, body { background-color: $white; padding: 0px; margin: 0px; color: $color; }
 body { overflow-x: hidden; }
 #app { text-align: center; }
-.p-main { overflow: hidden; }
+.p-main { overflow: hidden; padding-bottom: 300px; }
 section, footer { width: 100%; height: auto; display: flex; justify-content: center; position: relative; }
 .container { max-width: 1024px; width: 100%; position: relative; }
 header { position: absolute; width: 100%; z-index: 100; top: 0px; left: 0px; text-align: left; color: $white; display: flex; justify-content: center; .container { display: flex; padding: 40px 0px 20px 0px; } .logo { img { display: inline-block; vertical-align: middle; width: 50px; margin-right: 5px; margin-left: 0px; } h1 { display: inline-block; margin: 0px; vertical-align: middle; font-size: 28px; } }

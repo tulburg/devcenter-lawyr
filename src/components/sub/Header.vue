@@ -113,7 +113,7 @@
 				{ href: "/features", title: "Features" },
 				{ href: "/pricing", title: "Pricing" },
 				{ href: "#contact", title: "Contact" },
-				{ href: "#signup", title: "Sign Up Free", action: true }
+				// { href: "#signup", title: "Sign Up Free", action: true }
 			],
 			fields: [
 				{ label: 'Name', ph: 'Enter name', key: 'name' },
