@@ -61,8 +61,9 @@
 		<Modal title="Contact Modal" :plain="1>0" :show="showContactModal" :sticky="1<0" :onclose="() => { showContactModal = false }">
 			<div slot="body">
 				<div class="contact">
-					<h1>Contact</h1>
-					<p>Hi, enter details of your enquiry below</p>
+					<h1 v-if="!submitting">Contact</h1>
+					<h1 v-else><i class="ic-spinner animate-spin"></i></h1>
+					<p :class="{ error: hasErrors }">{{ (hasErrors) ? error : 'Hi, enter details of your enquiry below' }}</p>
 					<form v-on:submit.prevent="submitSignUp">
 						<ul class="grid grid-2">
 							<li>
@@ -88,11 +89,11 @@
 							<li class="message-li">
 								<div class="input-wrapper-alt">
 									<label class="left">Your message</label>
-									<textarea placeholder="Enter your message"></textarea>
+									<textarea placeholder="Enter your message" v-model="contactMessage"></textarea>
 								</div>
 							</li>
 						</ul>
-						<button class="alt compat shadow">CONTINUE</button>
+						<button class="alt compat shadow" v-on:click="submitContact">CONTINUE</button>
 					</form>
 				</div>
 			</div>
@@ -123,7 +124,7 @@
 			],
 			errors: { name: '', email: '', username: '', password: '' },
 			signupSuccess: false, uploadSuccess: false, contactEmail: '', contactName: '', contactMessage: '',
-			contactNameError: '', contactEmailError: ''
+			contactNameError: '', contactEmailError: '', submitting: false, hasErrors: false, error: ''
 		} },
 		methods: {
 			setActiveLink(e) {
@@ -156,6 +157,22 @@
 				if(el.style.height == '0px') {
 					this.reveal(el); this.hide(od, () => { this.signupSuccess = false; });
 				}else { this.signupSuccess = true; this.hide(el); this.reveal(od);  }
+			},
+			submitContact() {
+				if(this.contactMessage == '' || this.contactName == '' || this.contactEmail == '') {
+					this.hasErrors = true; this.error = "All fields are required";
+					return;
+				}
+				this.submitting = true;
+				this.$http.post("https://lawyr.herokuapp.com/api/v1/users/submit-enquiry", {
+					message: this.contactMessage, name: this.contactName, email: this.contactEmail
+				}, {
+					headers: { 'Content-Type': 'application/json' }
+				}).then(res => res.json()).then(res => {
+					this.submitting = false;
+					this.showContactModal = false;
+					console.log(res);
+				}).catch(err => { console.log(err); this.submitting = false; this.hasErrors = true; this.error = "Error encountered, please check & try again" });
 			},
 			clearErrors() {
 				setTimeout(() => {
