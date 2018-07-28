@@ -173,6 +173,7 @@
 					this.showContactModal = false;
 					console.log(res);
 				}).catch(err => { console.log(err); this.submitting = false; this.hasErrors = true; this.error = "Error encountered, please check & try again" });
+				setTimeout(() => { self.hasErrors = false; self.error = ''; }, 8200);
 			},
 			clearErrors() {
 				setTimeout(() => {

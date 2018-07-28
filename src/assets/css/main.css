@@ -460,7 +460,7 @@ section.curated {
 footer {
   height: 300px; }
   footer.alt {
-    height: 600px; }
+    height: 300px; }
   footer h1 {
     font-weight: 100;
     color: #112A49;
@@ -1305,7 +1305,11 @@ div.modal .footer {
   section.pricing .text-container {
     padding-left: 20px; }
   section.pricing .image-container img.fan {
-    height: 400px; } }
+    height: 400px; }
+  section.pricing .image-container img.phone-cover {
+    right: -40px;
+    left: auto;
+    width: 80%; } }
 @media (max-width: 37.5em) {
   header .logo {
     padding-left: 20px; }

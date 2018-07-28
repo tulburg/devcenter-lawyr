@@ -46,7 +46,7 @@ section.group { height: 440px; padding: 0px 0px;
 section.curated { height: 600px; padding: 40px 0px; .container { position: absolute; top: 0px; } .background { background-color: $primary; height: 90%; width: 100%; h1 { color: $white; font-weight: 100; font-size: 32px; padding: 20px 0px; } }
 	.trophies { position: absolute; width: 100%; left: 0px; top: 180px; li { padding: 0px 20px; } .troph { background-color: $primary; height: 400px; box-shadow: 0px 18px 24px rgba(0,0,0,0.2); padding: 50px 40px; border-radius: 60px; border: 1px solid lighten($primary, 5%); &.alt { h3 { margin-bottom: 40px; margin-top: 40px; } } img { width: 50%; } h3 { font-weight: 100; color: $green; margin-bottom: 40px; font-size: 16px; }  p { color: $white; font-size: 14px; } } }
 }
-footer { height: 300px; &.alt { height: 600px; } h1 { font-weight: 100; color: $primary; margin-top: 60px; } p { color: darken($primary, 10%); margin-bottom: 40px; }
+footer { height: 300px; &.alt { height: 300px; } h1 { font-weight: 100; color: $primary; margin-top: 60px; } p { color: darken($primary, 10%); margin-bottom: 40px; }
 	.input-wrapper { width: 50%; background-color: $white; box-shadow: 0px 8px 15px rgba(0,0,0,0.1); display: inline-block; height: 80px; border-radius: 28px; border: 1px solid darken($white, 5%); margin-bottom: 80px; input { width: calc(100% - 150px); font-size: 18px; border: 0px; padding: 15px; padding-left: 30px; background-color: transparent; } button { margin-top: 15px; margin-right: 15px; padding: 15px 30px; } }
 	.download { margin-bottom: 100px; img { height: 50px; margin-right: 20px; } }
 	span { color: $light-color; margin-bottom: 50px; display: inline-block; }
@@ -122,7 +122,7 @@ div.modal .footer { position: absolute; left: 0px; top: 100%; background-color: 
 	#contact-modal { .dialog { .body { padding: 20px; } } }
 	/* page */
 	section.points { padding: 10px; ul.grid { width: 100%; li { padding: 10px; }} }
-	section.pricing { .text-container { padding-left: 20px; } .image-container { img.fan { height: 400px; } } }
+	section.pricing { .text-container { padding-left: 20px; } .image-container { img.fan { height: 400px; } img.phone-cover { right: -40px; left: auto; width: 80%; } } }
 }
 
 @include resolve(mobile) {
