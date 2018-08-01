@@ -458,9 +458,9 @@ section.curated {
         font-size: 14px; }
 
 footer {
-  height: 300px; }
+  height: 340px; }
   footer.alt {
-    height: 300px; }
+    height: 340px; }
   footer h1 {
     font-weight: 100;
     color: #112A49;
@@ -478,7 +478,7 @@ footer {
     border: 1px solid #f2f2f2;
     margin-bottom: 80px; }
     footer .input-wrapper input {
-      width: calc(100% - 150px);
+      width: calc(100% - 160px);
       font-size: 18px;
       border: 0px;
       padding: 15px;
@@ -1177,10 +1177,13 @@ div.modal .footer {
 
 @media (max-width: 50em) {
   .p-main {
-    overflow: hidden; }
+    overflow: hidden;
+    padding-bottom: 0px; }
 
   footer {
     height: auto; }
+    footer.alt {
+      margin-bottom: 300px; }
 
   header .logo {
     padding-left: 40px;
@@ -1426,13 +1429,15 @@ div.modal .footer {
   section.curated {
     display: none; }
 
+  footer.alt {
+    margin-bottom: 300px; }
   footer .input-wrapper {
     width: 90%; }
     footer .input-wrapper button {
       padding-left: 10px;
       padding-right: 10px; }
     footer .input-wrapper input {
-      width: calc(100% - 100px); }
+      width: calc(100% - 140px); }
   footer h1 {
     font-size: 26px; }
 
@@ -1468,7 +1473,8 @@ div.modal .footer {
 
   /* page */
   .p-main {
-    overflow: hidden; }
+    overflow: hidden;
+    padding-bottom: 0px; }
 
   section.features .looper {
     width: 150%;

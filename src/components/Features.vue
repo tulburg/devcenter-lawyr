@@ -28,16 +28,16 @@
 			<div class="container">
 				<h1>Get Started for Free</h1>
 				<p>Download Lawyr</p>
-				<div class="input-wrapper">
-					<input type="text" placeholder="Enter Email Address" />
-					<button class="alt">Sign Up</button>
-				</div>
 				<div class="download">
 					<a href="#"><img src="../assets/img/app_store.png" alt="App Store" /></a>
 					<a href="#"><img src="../assets/img/googleplay.png" alt="App Store" /></a>
 				</div>
-
-				<span>&copy; Lawyr 2018</span>
+				<h1>Subscribe to stay up to date with Lawyr</h1>
+				<div class="input-wrapper">
+					<input type="text" placeholder="Enter Email Address" />
+					<button class="alt">Subscribe</button>
+				</div>
+				<div><span>&copy; Lawyr 2018</span></div>
 			</div>
 		</footer>
 	</div>
