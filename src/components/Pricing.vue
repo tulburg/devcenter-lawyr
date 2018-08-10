@@ -62,8 +62,9 @@
 				</div>
 				<h1>Subscribe to stay up to date with Lawyr</h1>
 				<div class="input-wrapper">
-					<input type="text" placeholder="Enter Email Address" />
-					<button class="alt">Subscribe</button>
+					<input type="text" placeholder="Enter Email Address" v-model="email" />
+					<button class="alt" v-on:click="subscribe" v-if="!loading">Subscribe</button>
+					<button class="alt" v-else><i class="ic-spinner animate-spin"></i></button>
 				</div>
 				<div><span>&copy; Lawyr 2018</span></div>
 			</div>
@@ -74,6 +75,17 @@
 <script>
 	export default {
 		name: 'Pricing',
-		data() { return {} }
+		data() { return { email: '', loading: false } },
+		methods: {
+			subscribe() {
+				this.loading = true;
+				this.$http.post("https://lawyr.herokuapp.com/api/v1/users/subscribe", {
+					email: this.email
+				}).then(res => {
+					this.loading = false;
+					this.email = '';
+				}).catch(err => { console.log(err); this.loading = false; } );
+			}
+		}
 	}
 </script>
